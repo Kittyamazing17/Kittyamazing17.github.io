@@ -1,0 +1,101 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+
+}
+body {
+    background: rgb(194,189,21);
+    background: linear-gradient(90deg, rgba(194,189,21,1) 0%, rgba(5,40,194,0.989233193277311) 85%);
+}
+.demographics,
+th,
+td {
+    border: 3px solid black;
+    padding: 5px;
+    border-collapse: collapse;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+}
+.menu {
+    background-color: #355;
+    margin: 20px;
+    width: 535px;
+    
+}
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.menu ul li {
+    float: left;
+}
+.menu ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+.menu ul li a:hover {
+    background-color: #555;
+}
+#info {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 10px;
+    border: 3px solid black;
+    width: 300px;
+    margin-left: 30px;
+    position: relative;
+}
+#flag {
+    float: left;
+    margin-right: 10px;
+    clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+    height: auto;
+    width: 250px;
+}
+.demographics {
+    margin-bottom: 30px;
+    margin-left: 30px;
+}
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 40px;
+    font-family: fantasy;
+    background-image: url(beach.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+img {
+    float: left;
+    margin-right: 30px;
+    margin-left: 10px;
+}
+.kzoo-aside {
+    font-size: 15px;
+
+}
+section {
+    margin: 20px 20px;
+}
+footer {
+    margin: 20px 20px;
+}
+label {
+    font-size: 20px;
+}
+    
+
+
