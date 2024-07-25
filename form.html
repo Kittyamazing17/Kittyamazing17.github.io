@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Subscribe</title>
+    <link rel="stylesheet" href="../css/normalize.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>Would you like to know more?</header>
+    <nav class="menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="lansing.html">Lansing</a></li>
+        <li><a href="detroit.html">Detroit</a></li>
+        <li><a href="kalamazoo.html">Kalamazoo</a></li>
+        <li><a href="form.html">Subscribe</a></li>
+      </ul>
+    </nav>
+    <section>
+      <form id="userForm">
+        <label for="firstName">First Name:</label>
+        <input
+          type="text"
+          id="firstName"
+          name="firstName"
+          placeholder="John"
+          required
+        />
+
+        <label for="lastName">Last Name:</label>
+        <input
+          type="text"
+          id="lastName"
+          name="lastName"
+          placeholder="Doe"
+          required
+        />
+
+        <label for="email">Email Address:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="ABC123@place.com"
+          required
+        />
+
+        <label for="confirmEmail">Confirm Email Address:</label>
+        <input
+          type="email"
+          id="confirmEmail"
+          name="confirmEmail"
+          placeholder="ABC123@place.com"
+          required
+        />
+        <span id="emailError" class="error-message"></span>
+
+        <label for="question">Any Questions?</label>
+        <textarea
+          id="question"
+          name="question"
+          rows="3"
+          placeholder="How is michigan so beauitful?"
+        ></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+
+      <script>
+        document
+          .getElementById("confirmEmail")
+          .addEventListener("input", function () {
+            var email = document.getElementById("email").value;
+            var confirmEmail = this.value;
+            var emailError = document.getElementById("emailError");
+
+            if (email !== confirmEmail) {
+              emailError.textContent = "Email addresses do not match";
+            } else {
+              emailError.textContent = "";
+            }
+          });
+
+        document
+          .getElementById("userForm")
+          .addEventListener("submit", function (event) {
+            var email = document.getElementById("email").value;
+            var confirmEmail = document.getElementById("confirmEmail").value;
+
+            if (email !== confirmEmail) {
+              alert(
+                "Please make sure email addresses match before submitting."
+              );
+              event.preventDefault(); // Prevent form submission
+            }
+          });
+      </script>
+      <img src="michigan2.png" alt="A Michigan state flag" />
+    </section>
+    <aside>
+      <p>Subscribe for more information!<br /></p>
+    </aside>
+    <footer>
+      <p>If you would like to know more, follow the link below</p>
+      <a href="https://en.wikipedia.org/wiki/Michigan" target="_blank"
+        >Wikipedia</a
+      >
+    </footer>
+  </body>
+</html>
