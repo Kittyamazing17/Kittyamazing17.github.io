@@ -96,6 +96,10 @@ footer {
 label {
     font-size: 20px;
 }
+.flag {
+    position: absolute;
+    bottom: 80px;
+}
     
 
 
